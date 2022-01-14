@@ -1,10 +1,12 @@
-import './App.css';
+import "./App.css";
+import Header from "./Header";
+import Home from "./Home";
 
 function App() {
-   return (
+  return (
     <div className="App">
-      <h1>Hello And please be fast not just fast but superfast</h1>
-      <Header/>
+      <Header />
+      <Home />
     </div>
   );
 }
