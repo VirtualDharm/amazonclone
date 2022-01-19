@@ -1,0 +1,9 @@
+Data Layer kya and kaise hai working 
+Currency format ?
+Redux ?
+StateProvider ?
+Reducer?
+>
+=>
+selector
+dealing with data Layer
