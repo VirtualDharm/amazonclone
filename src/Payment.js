@@ -6,7 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
-import axios from "./axios";
+// import axios from "./axios";
 import { db } from "./firebase";
 
 function Payment() {
@@ -25,12 +25,12 @@ function Payment() {
   useEffect(() => {
     // generate the special stripe secret which allows us to charge a customer
     const getClientSecret = async () => {
-      const response = await axios({
-        method: "post",
-        // Stripe expects the total in a currencies subunits
-        url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
-      });
-      setClientSecret(response.data.clientSecret);
+      // const response = await axios({
+      //   method: "post",
+      //   // Stripe expects the total in a currencies subunits
+      //   url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
+      // });
+      // setClientSecret(response.data.clientSecret);
     };
 
     getClientSecret();
@@ -77,7 +77,7 @@ function Payment() {
 
   const handleChange = (event) => {
     // Listen for changes in the CardElement
-    // and display any errors as the customer types their card details
+    // and display any errors as the customer types their card details 
     setDisabled(event.empty);
     setError(event.error ? event.error.message : "");
   };
